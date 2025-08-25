@@ -1,6 +1,6 @@
 # Sentiment Analysis: VADER vs Scikit-learn
 
-A comparison of lexicon-based and machine learning approaches for sentiment analysis using Amazon product reviews.
+A comparison of lexicon-based and machine learning approaches for sentiment analysis using Amazon movie reviews.
 
 ## Overview
 
@@ -8,7 +8,7 @@ This project compares two different sentiment analysis methods:
 - **VADER**: A lexicon-based approach using NLTK's VADER sentiment analyzer
 - **Scikit-learn**: A machine learning approach using TF-IDF vectorization and LinearSVC
 
-The analysis is performed on a dataset of 10,000 Amazon product reviews with pre-labeled positive and negative sentiments.
+The analysis is performed on a dataset of 10,000 reviews with pre-labeled positive and negative sentiments.
 
 ## Dataset
 
@@ -33,10 +33,9 @@ The analysis is performed on a dataset of 10,000 Amazon product reviews with pre
 
 ## Results
 
-| Model | Accuracy | Negative Precision | Positive Precision | Negative Recall | Positive Recall |
-|-------|----------|-------------------|-------------------|-----------------|-----------------|
-| VADER | 0.71 | 0.86 | 0.64 | 0.52 | 0.91 |
-| Scikit-learn | 0.87 | 0.86 | 0.89 | 0.89 | 0.85 |
+### Performance Comparison
+![Performance Comparison](performance_comparison.png)
+
 
 ## Key Findings
 
@@ -47,7 +46,7 @@ The analysis is performed on a dataset of 10,000 Amazon product reviews with pre
 
 ## Files
 
-- `sentiment_analysis_comparison.ipynb`: Main analysis notebook
+- `sentiment_analysis.py`: Main analysis script
 - `amazonreviews.tsv`: Dataset file
 - `README.md`: This file
 
@@ -63,12 +62,27 @@ The analysis is performed on a dataset of 10,000 Amazon product reviews with pre
 
 ## Usage
 
-1. Upload the notebook to Google Colab or run locally
-2. Upload the `amazonreviews.tsv` file when prompted
-3. Run all cells to see the complete analysis
+1. Ensure you have the required packages installed:
+   ```bash
+   pip install pandas numpy matplotlib nltk scikit-learn
+   ```
+
+2. Place the `amazonreviews.tsv` file in the same directory as the script
+
+3. Run the analysis:
+   ```bash
+   python sentiment_analysis.py
+   ```
+
+4. The script will automatically:
+   - Load and analyze the data
+   - Perform VADER sentiment analysis
+   - Train and evaluate Scikit-learn model
+   - Generate all visualizations
+   - Display results
 
 ## Notes
 
-- The notebook is designed to run in Google Colab
-- File upload is required for the dataset
+- The script automatically downloads required NLTK data
 - Results may vary slightly due to random train/test splitting
+- All visualizations are saved as high-quality PNG files
