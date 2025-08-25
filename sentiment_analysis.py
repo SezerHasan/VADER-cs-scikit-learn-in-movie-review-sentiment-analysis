@@ -1,5 +1,4 @@
 # VADER vs Scikit-learn Sentiment Analysis
-# Simple and straightforward code
 
 import pandas as pd
 import numpy as np
@@ -12,10 +11,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
-print("VADER vs Scikit-learn Sentiment Analysis")
-print("="*50)
-
-# Download NLTK data if needed
+# Download VADER
 try:
     nltk.data.find('vader_lexicon')
 except LookupError:
@@ -28,10 +24,6 @@ print(f"Dataset loaded: {len(df)} reviews")
 print(f"Label distribution:\n{df['label'].value_counts()}")
 
 # VADER Analysis
-print("\n" + "="*50)
-print("VADER SENTIMENT ANALYSIS")
-print("="*50)
-
 analyzer = SentimentIntensityAnalyzer()
 print("Analyzing reviews with VADER...")
 
@@ -100,10 +92,6 @@ sklearn_neg_f1 = 2 * (sklearn_neg_precision * sklearn_neg_recall) / (sklearn_neg
 sklearn_pos_f1 = 2 * (sklearn_pos_precision * sklearn_pos_recall) / (sklearn_pos_precision + sklearn_pos_recall)
 
 # Create plots
-print("\n" + "="*50)
-print("CREATING PLOTS")
-print("="*50)
-
 # Set up data for plots
 models = ['VADER', 'Scikit-learn']
 accuracy_scores = [vader_accuracy, sklearn_accuracy]
