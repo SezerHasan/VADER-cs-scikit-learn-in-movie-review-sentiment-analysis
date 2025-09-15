@@ -1,0 +1,22 @@
+[
+  {
+    "id": "read_001",
+    "title": "Climate Change and Its Effects",
+    "passage": "Climate change refers to long-term shifts in global temperatures and weather patterns. While climate variations are natural, human activities have been the main driver of climate change since the 1800s, primarily due to burning fossil fuels...",
+    "questions": [
+      {
+        "question": "What is the main cause of climate change since the 1800s?",
+        "options": [
+          "Natural variations",
+          "Human activities",
+          "Solar radiation",
+          "Ocean currents"
+        ],
+        "correct": 1,
+        "explanation": "The passage states that human activities have been the main driver of climate change since the 1800s."
+      }
+    ],
+    "difficulty": "intermediate",
+    "word_count": 250
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "write_001",
+    "type": "essay",
+    "topic": "The advantages and disadvantages of social media",
+    "prompt": "Some people believe that social media has a positive impact on society, while others argue that it has negative effects. Discuss both views and give your opinion.",
+    "sample_essay": "Social media has become an integral part of modern life, connecting people across the globe...",
+    "band_score": 7.0,
+    "criteria": {
+      "task_achievement": 7,
+      "coherence_cohesion": 7,
+      "lexical_resource": 7,
+      "grammatical_range_accuracy": 7
+    },
+    "difficulty": "intermediate"
+  }
+]

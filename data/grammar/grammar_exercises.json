@@ -1,0 +1,26 @@
+[
+  {
+    "id": "gram_001",
+    "type": "error_correction",
+    "difficulty": "beginner",
+    "sentence": "I am go to school yesterday.",
+    "corrected": "I went to school yesterday.",
+    "explanation": "Past tense should be used for actions completed in the past.",
+    "grammar_point": "past_tense"
+  },
+  {
+    "id": "gram_002",
+    "type": "multiple_choice",
+    "difficulty": "intermediate",
+    "question": "Choose the correct form:",
+    "options": [
+      "She have been",
+      "She has been",
+      "She is been",
+      "She was been"
+    ],
+    "correct": 1,
+    "explanation": "Present perfect tense uses 'has' with third person singular.",
+    "grammar_point": "present_perfect"
+  }
+]

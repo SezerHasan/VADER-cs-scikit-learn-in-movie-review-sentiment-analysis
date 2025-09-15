@@ -1,0 +1,18 @@
+[
+  {
+    "id": "speak_001",
+    "part": 1,
+    "topic": "Hometown",
+    "questions": [
+      "Where are you from?",
+      "What do you like about your hometown?",
+      "Has your hometown changed much over the years?"
+    ],
+    "sample_responses": [
+      "I'm from a small city in the north of the country...",
+      "What I like most about my hometown is the sense of community...",
+      "Yes, my hometown has changed quite significantly..."
+    ],
+    "difficulty": "beginner"
+  }
+]

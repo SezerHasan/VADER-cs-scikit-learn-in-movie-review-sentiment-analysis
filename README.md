@@ -1,88 +1,53 @@
-# Sentiment Analysis: VADER vs Scikit-learn
+# TOEFL/IELTS AI Teaching Platform
 
-A comparison of lexicon-based and machine learning approaches for sentiment analysis using Amazon movie reviews.
+A multimodal LLM platform for teaching TOEFL/IELTS skills including grammar, reading, writing, and speaking.
 
-## Overview
+## Project Structure
 
-This project compares two different sentiment analysis methods:
-- **VADER**: A lexicon-based approach using NLTK's VADER sentiment analyzer
-- **Scikit-learn**: A machine learning approach using TF-IDF vectorization and LinearSVC
+```
+toefl-ielts-ai/
+├── data/                   # Training data and datasets
+│   ├── grammar/           # Grammar exercises and corrections
+│   ├── reading/           # Reading comprehension passages
+│   ├── writing/           # Writing prompts and samples
+│   └── speaking/          # Speaking practice materials
+├── models/                # Fine-tuned models
+│   ├── grammar_model/     # Grammar correction model
+│   ├── reading_model/     # Reading comprehension model
+│   └── writing_model/     # Writing assessment model
+├── backend/               # FastAPI backend
+│   ├── api/              # API endpoints
+│   ├── services/         # Business logic
+│   └── utils/            # Utility functions
+├── frontend/              # Next.js frontend
+│   ├── components/       # React components
+│   ├── pages/            # Next.js pages
+│   └── styles/           # CSS and styling
+├── scripts/               # Data processing scripts
+└── docs/                  # Documentation
+```
 
-The analysis is performed on a dataset of 10,000 reviews with pre-labeled positive and negative sentiments.
+## Technology Stack
 
-## Dataset
+- **Backend**: FastAPI, Python, PostgreSQL
+- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **AI/ML**: LLaMA Factory, Hugging Face Transformers
+- **Audio**: ElevenLabs TTS, Whisper ASR
+- **Deployment**: Docker, Nginx, DigitalOcean
 
-- **Source**: Amazon product reviews
-- **Size**: 10,000 reviews
-- **Format**: TSV file with 'label' and 'review' columns
-- **Labels**: 'pos' (positive) and 'neg' (negative)
+## Getting Started
 
-## Methods
+1. Clone the repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Set up environment variables
+4. Run data collection scripts
+5. Fine-tune models using LLaMA Factory
+6. Start development server
 
-### VADER Sentiment Analysis
-- Uses NLTK's VADER (Valence Aware Dictionary and sEntiment Reasoner) lexicon
-- Rule-based approach with predefined sentiment scores
-- No training required
-- Fast and lightweight
+## Project Timeline
 
-### Scikit-learn Pipeline
-- TF-IDF vectorization for text feature extraction
-- Linear Support Vector Classification (LinearSVC)
-- Train/test split (67%/33%)
-- Requires labeled training data
-
-## Results
-
-### Performance Comparison
-![Performance Comparison](performance_comparison.png)
-
-
-## Key Findings
-
-- Scikit-learn achieved higher overall accuracy (87% vs 71%)
-- VADER shows bias toward positive predictions
-- Scikit-learn provides more balanced performance across classes
-- VADER struggles with negative sentiment detection (52% recall)
-
-## Files
-
-- `sentiment_analysis.py`: Main analysis script
-- `amazonreviews.tsv`: Dataset file
-- `README.md`: This file
-
-## Requirements
-
-- Python 3.7+
-- pandas
-- numpy
-- nltk
-- scikit-learn
-- matplotlib
-- seaborn
-
-## Usage
-
-1. Ensure you have the required packages installed:
-   ```bash
-   pip install pandas numpy matplotlib nltk scikit-learn
-   ```
-
-2. Place the `amazonreviews.tsv` file in the same directory as the script
-
-3. Run the analysis:
-   ```bash
-   python sentiment_analysis.py
-   ```
-
-4. The script will automatically:
-   - Load and analyze the data
-   - Perform VADER sentiment analysis
-   - Train and evaluate Scikit-learn model
-   - Generate all visualizations
-   - Display results
-
-## Notes
-
-- The script automatically downloads required NLTK data
-- Results may vary slightly due to random train/test splitting
-- All visualizations are saved as high-quality PNG files
+- **Week 1-2**: Environment setup and data collection
+- **Week 3-4**: Text model development
+- **Week 5-6**: Web interface development
+- **Week 7-8**: Audio integration
+- **Week 9-10**: Deployment and launch
